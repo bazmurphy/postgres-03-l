@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  display: grid;
+  row-gap: 10px;
+  background-color: hsl(0, 0%, 92%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid hsl(207, 47%, 39%);
+  padding: 5px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  row-gap: 10px;
+  align-items: start;
+}
+
+#input-container {
+  display: grid;
+  row-gap: 10px;
+}
+
+#output-container {
+  background-color: hsl(0, 0%, 95%);
+  border: 1px solid darkgray;
+  padding: 5px;
+  align-self: stretch;
+  overflow-x: auto;
+  overflow-y: scroll;
+  max-height: 100%;
+}
+
+pre {
+  margin: 0;
+}
+
+#output-json {
+  font-family: monospace;
+}
+
+header > img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+header > h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5px;
+}
+
+button,
+input[type="submit"] {
+  background-color: hsl(207, 47%, 39%);
+  color: hsl(0, 0%, 90%);
+  border: none;
+  border-radius: 2px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: hsl(207, 47%, 49%);
+  color: hsl(0, 0%, 90%);
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  row-gap: 5px;
+}
+
+legend {
+  font-weight: 600;
+}
+
+input[type="submit"],
+#form-get-customers-byid-submit,
+#form-get-customers-bycity-submit,
+#form-get-customers-byname-submit,
+#form-put-submit,
+#form-delete-submit {
+  grid-column: 1 / 3;
+}

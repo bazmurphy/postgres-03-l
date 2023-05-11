@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PostgreSQL API - Hotels v2.0</title>
+  </head>
+  <body>
+    <header>
+      <img src="elephant.png" alt="" />
+      <h1>PostgreSQL API - Hotels v2.0</h1>
+    </header>
+    <main>
+      <div id="input-container">
+        <div>
+          <h2>Links to GET API Routes :</h2>
+          <nav id="nav-links"></nav>
+        </div>
+
+        <div>
+          <h2>Buttons to GET (Inlayed Output) :</h2>
+          <nav id="nav-buttons"></nav>
+        </div>
+
+        <form id="form-get-customers-byid">
+          <fieldset>
+            <legend>GET /customers:id</legend>
+            <label for="form-get-customers-byid-id">Customer ID:</label>
+            <input
+              type="number"
+              id="form-get-customers-byid-id"
+              name="id"
+              value="1"
+              min="0"
+              max="200"
+              required
+            />
+            <button type="button" id="form-get-customers-byid-submit">
+              GET
+            </button>
+          </fieldset>
+        </form>
+
+        <form id="form-get-customers-bycity">
+          <fieldset>
+            <legend>GET /customers/by_city/:city</legend>
+            <label for="form-get-customers-bycity-city">City:</label>
+            <input
+              type="text"
+              id="form-get-customers-bycity-city"
+              name="city"
+              value="london"
+              required
+            />
+            <button type="button" id="form-get-customers-bycity-submit">
+              GET
+            </button>
+          </fieldset>
+        </form>
+
+        <form id="form-get-customers-byname">
+          <fieldset>
+            <legend>GET /customers/by_name/:name</legend>
+            <label for="form-get-customers-byname-name">Name:</label>
+            <input
+              type="text"
+              id="form-get-customers-byname-name"
+              name="name"
+              value="ran"
+              required
+            />
+            <button type="button" id="form-get-customers-byname-submit">
+              GET
+            </button>
+          </fieldset>
+        </form>
+
+        <form action="/customers" method="POST">
+          <fieldset>
+            <legend>POST /customers</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required />
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required />
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required />
+            <label for="postcode">Postcode:</label>
+            <input type="text" id="postcode" name="postcode" required />
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required />
+            <input type="submit" value="POST" />
+          </fieldset>
+        </form>
+        <form id="form-put">
+          <fieldset>
+            <legend>PUT /customers/:id</legend>
+            <label for="form-put-customerid">Customer ID:</label>
+            <input
+              type="number"
+              id="form-put-customerid"
+              name="customerid"
+              value="1"
+              min="1"
+              max="200"
+              required
+            />
+            <label for="form-put-email">Email:</label>
+            <input type="email" id="form-put-email" name="email" required />
+            <label for="form-put-phone">Phone:</label>
+            <input type="tel" id="form-put-phone" name="phone" required />
+            <button type="button" id="form-put-submit">PUT</button>
+          </fieldset>
+        </form>
+        <form id="form-delete">
+          <fieldset>
+            <legend>DELETE /customers/:id</legend>
+            <label for="form-delete-customerid">Customer ID:</label>
+            <input
+              type="number"
+              id="form-delete-customerid"
+              name="customerid"
+              value="1"
+              min="1"
+              max="200"
+              required
+            />
+            <button type="button" id="form-delete-submit">DELETE</button>
+          </fieldset>
+        </form>
+      </div>
+      <div id="output-container"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
