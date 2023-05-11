@@ -1,5 +1,11 @@
 # PostgreSQL Hotels API v2.0
 
+## Description
+
+Written from scratch Frontend with HTML, CSS, Vanilla JS
+Showcasing the Backend Node Express API and its functionality
+That is interacting with a PostgreSQL Database
+
 ## Screenshot:
 
 ![](project-screenshot.png)
